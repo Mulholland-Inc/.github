@@ -12,11 +12,11 @@ they're independently usable.
 
 | Package | What it does |
 |---|---|
+| [**core**](https://github.com/Mulholland-Inc/core) | Shared platform primitives: typed `Db` wrapper over the postgres driver, structured errors, logging, transactions. Every package below depends on it. |
 | [**basin**](https://github.com/Mulholland-Inc/basin) | Postgres-backed data warehouse — typed entity tables + connector landing zone. |
 | [**arroyo**](https://github.com/Mulholland-Inc/arroyo) | Connector framework. Pulls records from sources, lands them in basin. Ships with deterministic mock connectors for tests and demos. |
 | [**atlas**](https://github.com/Mulholland-Inc/atlas) | Ontology builder. Derives entity types, attributes, and relations by introspecting `information_schema` + `pg_constraint` over basin (or any schema). |
 | [**monorail**](https://github.com/Mulholland-Inc/monorail) | Postgres-backed agent runtime. Bring your own pg client; runs Anthropic-powered agents with tool use, channels, and a durable event log. |
-| [**phantom-cli**](https://github.com/Mulholland-Inc/phantom-cli) | Interactive REPL against a phantom-backed server. Auto-resolves Cloudflare Access creds for `*.phant.om`. |
 
 ## Conventions
 
